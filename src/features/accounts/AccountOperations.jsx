@@ -10,7 +10,7 @@ function AccountOperations() {
   const [currency, setCurrency] = useState("USD");
   const dispatch = useDispatch();
   const {
-    loan: currentLoan,
+    loan,
     loanPurpose: currentLoanPurpose,
     // balance,
     // isLoading,
@@ -72,7 +72,7 @@ function AccountOperations() {
             Withdraw {withdrawalAmount}
           </button>
         </div>
-        {currentLoan == 0 ? (
+        {loan == 0 ? (
           <div>
             <label>Request loan</label>
             <input
@@ -89,10 +89,10 @@ function AccountOperations() {
             <button onClick={handleRequestLoan}>Request loan</button>
           </div>
         ) : null}
-        {currentLoanPurpose ? (
+        {loan ? (
           <div>
             <span>
-              Pay back ${currentLoan}({currentLoanPurpose})
+              Pay back ${loan}({currentLoanPurpose})
             </span>
             <button onClick={handlePayLoan}>Pay loan</button>
           </div>
