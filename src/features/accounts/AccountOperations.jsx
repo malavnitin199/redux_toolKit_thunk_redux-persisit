@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addMoney,
-  withDraw,
-  PayLoan,
-  RequestLoan,
-  deposite,
-} from "./accountSlice";
+import { withDraw, PayLoan, RequestLoan, deposite } from "./accountSlice";
 
 function AccountOperations() {
   const [depositAmount, setDepositAmount] = useState("");
