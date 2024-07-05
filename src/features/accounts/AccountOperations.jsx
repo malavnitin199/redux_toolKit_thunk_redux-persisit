@@ -18,7 +18,8 @@ function AccountOperations() {
 
   function handleDeposit() {
     if (!depositAmount || !currency) return;
-    dispatch(deposite(+depositAmount, currency));
+    console.log("inide a handle Deposite");
+    dispatch(deposite({depositAmount, currency}));
     setDepositAmount("");
   }
 
